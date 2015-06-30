@@ -1,0 +1,106 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From Shop:
+* ic_launcher-web.png
+* proguard-project.txt
+From base_library_pullToRefresh_chenyoca:
+* LICENSE
+* build.xml
+* pom.xml
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+gson-2.1.jar => com.google.code.gson:gson:2.1
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.1.jar => version 2.1 in com.google.code.gson:gson:2.1
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+appcompat-v7 => [com.android.support:appcompat-v7:21.0.3]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In base_library_pullToRefresh_chenyoca:
+* AndroidManifest.xml => base_library_pullToRefresh_chenyoca\src\main\AndroidManifest.xml
+* assets\ => base_library_pullToRefresh_chenyoca\src\main\assets
+* res\ => base_library_pullToRefresh_chenyoca\src\main\res\
+* src\ => base_library_pullToRefresh_chenyoca\src\main\java\
+In Shop:
+* AndroidManifest.xml => shop\src\main\AndroidManifest.xml
+* assets\ => shop\src\main\assets
+* libs\alipaysdk.jar => shop\libs\alipaysdk.jar
+* libs\alipaysecsdk.jar => shop\libs\alipaysecsdk.jar
+* libs\alipayutdid.jar => shop\libs\alipayutdid.jar
+* libs\android-async-http-1.4.5.jar => shop\libs\android-async-http-1.4.5.jar
+* libs\android-support-v7-recyclerview.jar => shop\libs\android-support-v7-recyclerview.jar
+* libs\apache-mime4j-0.6.jar => shop\libs\apache-mime4j-0.6.jar
+* libs\baidumapapi_v2_4_1.jar => shop\libs\baidumapapi_v2_4_1.jar
+* libs\commons-codec-1.8.jar => shop\libs\commons-codec-1.8.jar
+* libs\httpmime-4.0.jar => shop\libs\httpmime-4.0.jar
+* libs\locSDK_3.1.jar => shop\libs\locSDK_3.1.jar
+* libs\universal-image-loader-1.9.4-SNAPSHOT.jar => shop\libs\universal-image-loader-1.9.4-SNAPSHOT.jar
+* lint.xml => shop\lint.xml
+* res\ => shop\src\main\res\
+* src\ => shop\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

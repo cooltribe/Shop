@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	
+    
+    <RadioGroup
+        android:id="@+id/nav"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="4.0" >
+
+        <RadioButton
+            android:id="@+id/index"
+            style="@style/nav"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:checked="true"
+            android:drawableTop="@drawable/homepage_select"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/classification"
+            style="@style/nav"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/classification_select"
+            android:text="分类" />
+
+        <RadioButton
+            android:id="@+id/shopcart"
+            style="@style/nav"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/shopcart_select"
+            android:text="购物车" />
+
+        <RadioButton
+            android:id="@+id/usercenter"
+            style="@style/nav"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/usercenter_select"
+            android:text="个人中心" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_above="@id/nav"
+        android:background="#ffcccccc" />
+
+    <LinearLayout
+        android:id="@+id/fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/line"
+        android:orientation="vertical" />
+
+</RelativeLayout>

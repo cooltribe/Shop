@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/ischecked"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/goods_pic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+             android:contentDescription="TODO"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="习惯" />
+
+            <TableLayout
+                android:layout_width="100dip"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:shrinkColumns="1,2,3" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/gridview_bj_noselect"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="-"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/quanlity"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/gridview_bj_noselect"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="1"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/add"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/gridview_bj_noselect"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="+"
+                        android:textSize="15sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bj"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/icon_del"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="删除"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000" />
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    >
+
+
+<LinearLayout 
+    android:id="@+id/bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+		
+        <CheckBox
+            android:id="@+id/allselect"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            style="@style/CustomCheckboxTheme"
+            android:text="全选" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="合计：" />
+
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:text="0.0"/>
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_bj"
+            android:textColor="#fff"
+            android:text="结算" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000" />
+</LinearLayout>
+<com.searun.shop.view.MyListView
+        android:id="@+id/cart"
+        android:layout_above="@id/bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:dividerHeight="5dp"
+        android:layout_height="wrap_content"
+         />
+</RelativeLayout>
+<!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/child_fragment_cart_pay.xml -->

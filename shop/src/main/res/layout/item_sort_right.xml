@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#cc0033"
+        android:textSize="15sp" />
+
+    <com.searun.shop.view.MyGridView
+        android:id="@+id/sort_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="1.0dip"
+        android:numColumns="3"
+        android:padding="1.0dip"
+        android:verticalSpacing="1.0dip" >
+    </com.searun.shop.view.MyGridView>
+
+</LinearLayout>

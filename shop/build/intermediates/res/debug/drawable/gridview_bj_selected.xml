@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="1.0dip" android:color="#ffcccccc" />
+    <solid android:color="#ff0000ff" />
+    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+</shape><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/drawable/gridview_bj_selected.xml -->

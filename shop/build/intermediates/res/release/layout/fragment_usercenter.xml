@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ccc"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/fragment_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/fragment_titlebar" />
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradual"
+        android:id="@+id/user_layout"
+        android:padding="20dp" >
+
+        <com.searun.shop.view.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_tx" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登陆"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/member_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#ff0000"
+                android:text="注册"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_jt" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额：" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#f00" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#ccc" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分：" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#f00" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc" />
+
+    <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/login_button"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <Button
+            android:id="@+id/login_out"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/login_out_button"
+            android:visibility="gone" />
+    </LinearLayout> -->
+
+    <com.searun.shop.view.ItemUserView
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+    </com.searun.shop.view.ItemUserView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal" >
+
+        <com.searun.shop.view.NumberImageView
+            android:id="@+id/pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.searun.shop.view.NumberImageView>
+		<View android:layout_width="1px"
+		    android:layout_height="match_parent"
+		    android:background="#ccc"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"/>
+        <com.searun.shop.view.NumberImageView
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.searun.shop.view.NumberImageView>
+
+        <View android:layout_width="1px"
+		    android:layout_height="match_parent"
+		    android:background="#ccc"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"/>
+        <com.searun.shop.view.NumberImageView
+            android:id="@+id/take_over"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.searun.shop.view.NumberImageView>
+
+        <View android:layout_width="1px"
+		    android:layout_height="match_parent"
+		    android:background="#ccc"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"/>
+        <com.searun.shop.view.NumberImageView
+            android:id="@+id/judge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.searun.shop.view.NumberImageView>
+
+        <View android:layout_width="1px"
+		    android:layout_height="match_parent"
+		    android:background="#ccc"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"/>
+        <com.searun.shop.view.NumberImageView
+            android:id="@+id/shouhou"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.searun.shop.view.NumberImageView>
+    </LinearLayout>
+
+    
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/store_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/footmark"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/kefu"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/feedback"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/about_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="5dp" >
+            </com.searun.shop.view.ItemUserView>
+
+            <com.searun.shop.view.ItemUserView
+                android:id="@+id/set"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content" >
+            </com.searun.shop.view.ItemUserView>
+            <Button 
+                android:id="@+id/login_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="退出"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_bj"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/fragment_usercenter.xml -->

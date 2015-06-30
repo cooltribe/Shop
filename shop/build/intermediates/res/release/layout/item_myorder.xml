@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+   
+    <RelativeLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单编号:" />
+
+        <!--  <TextView
+            android:id="@+id/order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="订单状态:"
+            android:textColor="#f00" />  -->
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        android:background="#ccc" />
+
+    <com.searun.shop.view.MyListView
+        android:id="@+id/order_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.searun.shop.view.MyListView>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共3件商品     运费：" />
+
+        <TextView
+            android:id="@+id/freight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="合计：" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f00" />
+    </LinearLayout>
+ <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        android:background="#ccc" />
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/order_state"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="订单状态" />
+         <TextView
+            android:id="@+id/pay_state"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+             android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="付款状态" />
+
+        <TextView
+            android:id="@+id/shiped_state"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+             android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="物流状态" />
+
+    </LinearLayout> 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        android:background="#ccc" />
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pay_button"
+            style="@style/style_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="去付款" />
+         <Button
+            android:id="@+id/judge"
+            style="@style/style_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="去评价" />
+
+        <Button
+            android:id="@+id/look"
+            style="@style/style_button"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="查看物流" />
+        <Button
+            android:id="@+id/return_product"
+            style="@style/style_button"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="退货" />
+        <Button
+            android:id="@+id/refund_button"
+            style="@style/style_button"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="退款" />
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/style_button"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="确认收货" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/item_myorder.xml -->

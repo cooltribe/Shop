@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout 
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <include 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/item_judge"/>
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        style="@style/bigRatingBar"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="4.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc"/>
+    <EditText 
+        android:id="@+id/judge_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="left|top"
+        android:padding="10dp"
+        android:hint="此次购物评价如何"
+        android:background="@null"/>
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc"/>
+    <LinearLayout 
+        android:id="@+id/judge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+       <com.searun.shop.view.MyGridView 
+           android:id="@+id/judge_gv"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:numColumns="3"
+           ></com.searun.shop.view.MyGridView >
+    </LinearLayout>
+     <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc"/>
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2.0" >
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bj"
+            android:textColor="#fff"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1.0"
+            android:text="提交" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/config_hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+</LinearLayout>
+</ScrollView><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/activity_write_judge.xml -->

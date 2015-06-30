@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/grey_transparent" >
+
+        <LinearLayout
+            android:id="@+id/single_select_button_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/single_select_alertdialog2_first_btn"
+                style="@style/single_select_alertdialog2_style"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/angle_bg_select"
+                android:text="" />
+
+            <Button
+                android:id="@+id/single_select_alertdialog2_secend_btn"
+                style="@style/single_select_alertdialog2_style"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/angle_bg_select"
+                android:text="" />
+
+            <Button
+                android:id="@+id/single_select_alertdialog2_third_btn"
+                style="@style/single_select_alertdialog2_style"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/angle_bg_select_grey"
+                android:text="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/custom_view_single_select_alertdialog2.xml -->

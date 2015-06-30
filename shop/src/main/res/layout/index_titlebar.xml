@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#cc0033"
+    android:padding="10.0dip" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="2.0dip"
+        android:drawableTop="@drawable/icon_message"
+        android:text="消息"
+        android:textColor="#ffffffff"
+        android:textSize="10.0sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_toLeftOf="@id/message"
+        android:layout_toRightOf="@id/logo"
+        android:background="#ffae002b"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="10.0dip"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:hint="搜索你想找的商品"
+        android:textSize="12sp"
+        android:padding="10.0dip"
+        android:textColorHint="#ffffffff" />
+
+</RelativeLayout>

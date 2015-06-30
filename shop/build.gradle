@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.searun.shop"
+        minSdkVersion 14
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':base_library_pullToRefresh_chenyoca')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.google.code.gson:gson:2.1'
+    compile files('libs/alipaysdk.jar')
+    compile files('libs/alipaysecsdk.jar')
+    compile files('libs/alipayutdid.jar')
+    compile files('libs/android-async-http-1.4.5.jar')
+    compile files('libs/android-support-v7-recyclerview.jar')
+    compile files('libs/baidumapapi_v2_4_1.jar')
+    compile files('libs/commons-codec-1.8.jar')
+    compile files('libs/locSDK_3.1.jar')
+    compile files('libs/universal-image-loader-1.9.4-SNAPSHOT.jar')
+    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+}

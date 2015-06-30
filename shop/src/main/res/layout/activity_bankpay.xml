@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<WebView 
+	    android:id="@+id/bank_description"
+	    android:padding="10dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    />
+	<TextView 
+	    android:id="@+id/notice"
+	    android:layout_marginTop="10dp"
+	    android:padding="10dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    />
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	     android:layout_marginTop="20dp"
+	    android:gravity="center"
+	    android:weightSum="2">
+	  <Button 
+	      android:id="@+id/confirm"
+	        android:layout_width="0dp"
+	       
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:background="@drawable/button_bj"
+	        android:textColor="#fff"
+	        android:padding="10dp"
+	        android:text="确定"
+	        />
+	</LinearLayout>
+</LinearLayout>

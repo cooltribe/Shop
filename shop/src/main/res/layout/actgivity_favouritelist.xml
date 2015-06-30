@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.searun.shop.view.XListView
+        android:id="@+id/favourite_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+    </com.searun.shop.view.XListView>
+
+    <TextView
+        android:id="@+id/no_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="您还没有收藏过任何商品！何不去逛逛~" />
+
+    <LinearLayout
+        android:id="@+id/stroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/stroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bj"
+            android:padding="10dp"
+            android:text="去逛逛"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>
