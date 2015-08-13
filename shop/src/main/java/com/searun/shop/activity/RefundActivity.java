@@ -1,33 +1,5 @@
 package com.searun.shop.activity;
 
-import java.math.BigDecimal;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.searun.shop.R;
-import com.searun.shop.adapter.DeliveryCorpAdapter;
-import com.searun.shop.adapter.PaymentAdapter;
-import com.searun.shop.application.ApplicationData;
-import com.searun.shop.data.MemberDto;
-import com.searun.shop.data.OrderItemDto;
-import com.searun.shop.data.DeliveryCorpDto;
-import com.searun.shop.data.ProductImage;
-import com.searun.shop.entity.NetWork;
-import com.searun.shop.entity.PdaResponse;
-import com.searun.shop.toobject.JsonToDeliveryCropList;
-import com.searun.shop.toobject.JsonToOrderItem;
-import com.searun.shop.toobject.JsonToPaymentList;
-import com.searun.shop.toobject.JsonToProductImage;
-import com.searun.shop.util.HttpUtil;
-import com.searun.shop.util.StoreObject;
-import com.searun.shop.view.CustomProgressDialog;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -46,9 +18,34 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.searun.shop.R;
+import com.searun.shop.adapter.DeliveryCorpAdapter;
+import com.searun.shop.application.ApplicationData;
+import com.searun.shop.data.DeliveryCorpDto;
+import com.searun.shop.data.MemberDto;
+import com.searun.shop.data.OrderItemDto;
+import com.searun.shop.data.ProductImage;
+import com.searun.shop.entity.NetWork;
+import com.searun.shop.entity.PdaResponse;
+import com.searun.shop.toobject.JsonToDeliveryCropList;
+import com.searun.shop.toobject.JsonToProductImage;
+import com.searun.shop.util.HttpUtil;
+import com.searun.shop.util.StoreObject;
+import com.searun.shop.view.CustomProgressDialog;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 public class RefundActivity extends Activity implements OnCheckedChangeListener, OnClickListener,OnItemClickListener {
 	private ImageView imageView;
@@ -144,7 +141,7 @@ public class RefundActivity extends Activity implements OnCheckedChangeListener,
 	private void setView() throws Exception{
 		List<ProductImage> imagesList = JsonToProductImage.parserLoginJson(orderItemDto.getProduct().getProductImageListStore());
 		if (null != imagesList) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(), imageView, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(), imageView, options);
 		} else {
 			imageView.setImageResource(R.drawable.mrpic_little);
 		}

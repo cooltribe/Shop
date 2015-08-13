@@ -2,18 +2,13 @@ package com.searun.shop.activity;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.os.Process;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -23,8 +18,8 @@ import com.searun.shop.fragment.ClassificationFragment;
 import com.searun.shop.fragment.HomePageFragment;
 import com.searun.shop.fragment.ShopCartFragment;
 import com.searun.shop.fragment.UserCenterFragment;
+import com.searun.shop.service.NetIsConnectedService;
 import com.searun.shop.util.ClickInterface;
-import com.searun.shop.util.UpdateService;
 
 public class MainActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener, ClickInterface {
 	private static final String TAG = "MainActivity";
@@ -56,12 +51,15 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 		} else {
 
 			// 退出
-
+			stopService();
 			finish();
 
 		}
 	}
-	
+	private void stopService(){
+		Intent intent = new Intent(MainActivity.this, NetIsConnectedService.class);
+		stopService(intent);
+	}
 	private void dataInit() {
 		instance = this;
 		this.fm = getSupportFragmentManager();

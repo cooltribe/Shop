@@ -1,19 +1,5 @@
 package com.searun.shop.activity;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Random;
-
-import com.alipay.sdk.app.PayTask;
-import com.searun.shop.R;
-import com.searun.shop.alipay.PayResult;
-import com.searun.shop.alipay.SignUtils;
-import com.searun.shop.data.OrderDto;
-import com.searun.shop.util.HttpUtil;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +13,20 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.alipay.sdk.app.PayTask;
+import com.searun.shop.R;
+import com.searun.shop.alipay.PayResult;
+import com.searun.shop.alipay.SignUtils;
+import com.searun.shop.data.OrderDto;
+import com.searun.shop.util.HttpUtil;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Random;
 
 public class AliPay extends Activity implements OnClickListener{
 	// 商户PID
@@ -234,7 +234,7 @@ public class AliPay extends Activity implements OnClickListener{
 			orderInfo += "&total_fee=" + "\"" + price + "\"";
 
 			// 服务器异步通知页面路径
-			orderInfo += "&notify_url=" + "\"" + HttpUtil.RETURN_URL + "/shop/payment_return_alipayAjaxReturn.action" + "\"";
+			orderInfo += "&notify_url=" + "\"" + HttpUtil.BASE_URL + "/shop/payment_return_alipayAjaxReturn.action" + "\"";
 
 			// 服务接口名称， 固定值
 			orderInfo += "&service=\"mobile.securitypay.pay\"";

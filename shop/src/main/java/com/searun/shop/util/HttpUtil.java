@@ -1,5 +1,7 @@
 package com.searun.shop.util;
 
+import android.util.Log;
+
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.BinaryHttpResponseHandler;
@@ -29,10 +31,11 @@ public class HttpUtil {
 //	 public static final String IMG_PATH = "http://192.168.2.36:8877/shopxx";
 //	 private static final String BASE_URL = "http://192.168.2.36:8877/shopxx/apps/";
 //	 public static final String RETURN_URL = "http://192.168.2.36:8877/shopxx";
+	 public static  String BASE_URL;
 
-	 public static final String IMG_PATH = "http://www.51egoods.com";
-	 private static final String BASE_URL = "http://www.51egoods.com/apps/";
-	 public static final String RETURN_URL = "http://www.51egoods.com";
+	public static void setBaseUrl(String baseUrl) {
+		BASE_URL = baseUrl;
+	}
 
 	private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -61,7 +64,9 @@ public class HttpUtil {
 	}
 
 	private static String getAbsoluteUrl(String paramString) {
-		return BASE_URL + paramString;
+//		Log.i("uuuuuuuuu", BASE_URL);
+		System.out.print("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" + BASE_URL);
+		return BASE_URL +"/apps/" + paramString;
 	}
 
 	public static AsyncHttpClient getClient() {
@@ -101,6 +106,7 @@ public class HttpUtil {
 	}
 
 	public static void post(String paramString, RequestParams paramRequestParams, JsonHttpResponseHandler paramJsonHttpResponseHandler) {
+		Log.i("hah啊哈哈哈哈   哈哈哈",getAbsoluteUrl(paramString));
 		client.post(getAbsoluteUrl(paramString), paramRequestParams, paramJsonHttpResponseHandler);
 	}
 }

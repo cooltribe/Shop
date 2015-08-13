@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_focused="true" android:drawable="@drawable/gridview_bj_selected" />
-    <item android:state_focused="false" android:drawable="@drawable/gridview_bj_noselect" />
-</selector><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/drawable/gridview_selector_backgroud.xml -->

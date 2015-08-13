@@ -28,10 +28,10 @@ import com.searun.shop.toobject.JsonToProductImage;
 import com.searun.shop.util.HttpUtil;
 import com.searun.shop.view.CustomProgressDialog;
 
-import java.util.List;
-
 import org.apache.http.Header;
 import org.json.JSONObject;
+
+import java.util.List;
 
 public class CartEditAdapter extends BaseAdapter {
 	MyApplication app;
@@ -91,7 +91,7 @@ public class CartEditAdapter extends BaseAdapter {
 					.getProductImageListStore());
 			if (null != imagesList) {
 				
-				ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(),
+				ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(),
 						vh.imageView, options);
 			} else {
 				vh.imageView.setImageResource(R.drawable.mrpic_little);

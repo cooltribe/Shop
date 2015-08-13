@@ -1,17 +1,6 @@
 package com.searun.shop.view;
 
-import java.util.List;
-
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.searun.shop.R;
-import com.searun.shop.data.ProductDto;
-import com.searun.shop.data.ProductImage;
-import com.searun.shop.util.HttpUtil;
-
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +8,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.searun.shop.R;
+import com.searun.shop.data.ProductImage;
+import com.searun.shop.util.HttpUtil;
+
+import java.util.List;
 
 public class InfoImageAdapter extends BaseAdapter
 {
@@ -74,7 +70,7 @@ public class InfoImageAdapter extends BaseAdapter
 		String imgPath = list == null ? "" :list.get(position % list.size()).getBigProductImagePath();
 		Log.i("图片路径", imgPath);
 		if (!list.isEmpty()) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + (list == null ? "" :imgPath), vh.imageView, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + (list == null ? "" :imgPath), vh.imageView, options);
 		} else {
 			vh.imageView.setImageResource(R.drawable.mrpic);
 		}

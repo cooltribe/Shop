@@ -9,7 +9,6 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.searun.shop.data.CartItemDto;
 import com.searun.shop.data.MemberDto;
-import com.searun.shop.data.ProductDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +17,16 @@ public class MyApplication extends Application {
 	
 	private List<CartItemDto> cartList = new ArrayList<CartItemDto>();
 	private List<CartItemDto> confirmList = new ArrayList<CartItemDto>();
-
+	private  static  String BASE_URL;
 	private MemberDto md;
+
+	public static String getBaseUrl() {
+		return BASE_URL;
+	}
+
+	public static void setBaseUrl(String baseUrl) {
+		BASE_URL = baseUrl;
+	}
 
 	public MemberDto getMd() {
 		return md;

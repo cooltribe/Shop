@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.searun.shop.service.NetIsConnectedService;
+
 public class LoadingActivity extends Activity {
 	
 	private Handler handle = new Handler(){
@@ -23,10 +25,15 @@ public class LoadingActivity extends Activity {
 			}
 		};
 	};
+	private void startService(){
+		Intent intent = new Intent(LoadingActivity.this, NetIsConnectedService.class);
+		startService(intent);
+	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		startService();
 		new Handler().postDelayed(new Runnable() {
 			
 			@Override

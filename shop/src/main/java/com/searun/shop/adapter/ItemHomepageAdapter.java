@@ -1,8 +1,6 @@
 package com.searun.shop.adapter;
 
 import android.content.Context;
-import android.hardware.Camera.Size;
-import android.text.TextPaint;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +12,6 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.searun.shop.R;
-import com.searun.shop.application.ApplicationData;
 import com.searun.shop.data.ProductDto;
 import com.searun.shop.data.ProductImage;
 import com.searun.shop.toobject.JsonToProductImage;
@@ -82,8 +79,8 @@ public class ItemHomepageAdapter extends BaseAdapter {
 				imageList = JsonToProductImage.parserLoginJson(getList().get(paramInt).getProductImageListStore());
 				if (null != imageList) {
 					
-					Log.i("图片路径"+paramInt, HttpUtil.IMG_PATH + imageList.get(0).getSmallProductImagePath());
-				ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH  + imageList.get(0).getSmallProductImagePath(), localViewHolder.imageView,
+					Log.i("图片路径"+paramInt, HttpUtil.BASE_URL + imageList.get(0).getSmallProductImagePath());
+				ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL  + imageList.get(0).getSmallProductImagePath(), localViewHolder.imageView,
 						options);
 				} else {
 					localViewHolder.imageView.setImageResource(R.drawable.mrpic_little);

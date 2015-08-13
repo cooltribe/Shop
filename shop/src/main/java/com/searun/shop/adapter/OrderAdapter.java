@@ -352,6 +352,16 @@ public class OrderAdapter extends BaseAdapter {
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					// TODO Auto-generated method stub
 //					paymentConfigDto = list.get(position);
+//					if (payList.get(position).getPaymentConfigType().equals("alipay")){
+//						Intent aliIntent = new Intent(context, AliPay.class);
+//						aliIntent.putExtra("order", list.get(location));
+//						context.startActivity(aliIntent);
+//					} else if (payList.get(position).getPaymentConfigType().equals("offline")){
+//						Intent bankIntent = new Intent(context, BankPay.class);
+//						bankIntent.putExtra("order", list.get(location));
+//						bankIntent.putExtra("paymentConfigDto",payList.get(position));
+//						context.startActivity(bankIntent);
+//					}
 					switch (position) {
 					case 0:
 						Intent aliIntent = new Intent(context, AliPay.class);

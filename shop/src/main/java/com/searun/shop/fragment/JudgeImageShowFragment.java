@@ -34,7 +34,7 @@ public class JudgeImageShowFragment extends Fragment {
 		View view = inflater.inflate(R.layout.fragment_judge_image_show, container, false);
 		ImageView imageView = (ImageView) view.findViewById(R.id.judge_show_image);
 		if (null != productImage.getBigProductImagePath() && !productImage.getBigProductImagePath().equals("")) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + (productImage == null ? "" :productImage.getBigProductImagePath()), imageView, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + (productImage == null ? "" :productImage.getBigProductImagePath()), imageView, options);
 		} else {
 			imageView.setImageResource(R.drawable.mrpic);
 		}

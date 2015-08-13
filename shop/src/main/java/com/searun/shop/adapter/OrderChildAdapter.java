@@ -10,36 +10,22 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.searun.shop.R;
 import com.searun.shop.activity.RefundActivity;
 import com.searun.shop.activity.WriteJudgeActivity;
-import com.searun.shop.application.MyApplication;
 import com.searun.shop.data.CartItemDto;
-import com.searun.shop.data.MemberDto;
 import com.searun.shop.data.OrderItemDto;
 import com.searun.shop.data.ProductImage;
-import com.searun.shop.entity.NetWork;
-import com.searun.shop.entity.PdaResponse;
-import com.searun.shop.toobject.JsonToOrderItem;
 import com.searun.shop.toobject.JsonToProductImage;
 import com.searun.shop.util.HttpUtil;
 import com.searun.shop.view.CustomProgressDialog;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 public class OrderChildAdapter extends BaseAdapter
@@ -107,7 +93,7 @@ public class OrderChildAdapter extends BaseAdapter
 		}
 		List<ProductImage> imagesList = JsonToProductImage.parserLoginJson(list.get(paramInt).getProduct().getProductImageListStore());
 		if (null != imagesList) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
 		} else {
 			vh.imageView.setImageResource(R.drawable.mrpic_little);
 		}

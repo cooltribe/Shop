@@ -435,15 +435,15 @@ public class ConfirmOrder extends Activity implements OnClickListener,OnItemClic
 						PdaResponse<OrderDto> pdaResponse = JsonToOrder.parserLoginJson(response.toString());
 						if (pdaResponse.isSuccess()) {
 							OrderDto orderDto = pdaResponse.getData();
-							if (orderDto.getPaymentConfig().getId().equals("402882134cdf2f3d014ce04ae515003a")) {
+							if (orderDto.getPaymentConfig().getPaymentConfigType().equals("offline")) {
 								Intent payIntent = new Intent(instance, BankPay.class);
 								Bundle bundle = new Bundle();
 								bundle.putSerializable("order", orderDto);
 								bundle.putSerializable("paymentConfigDto",paymentConfigDto);
 								payIntent.putExtras(bundle);
 								startActivity(payIntent);
-							}else if (orderDto.getPaymentConfig().getId().equals("402881862b9f9e78012b9fa02aca0004")) {
-								
+							}else if (orderDto.getPaymentConfig().getPaymentConfigType().equals("alipay")) {
+
 								Intent payIntent = new Intent(instance, AliPay.class);
 								Bundle bundle = new Bundle();
 								bundle.putSerializable("order", orderDto);

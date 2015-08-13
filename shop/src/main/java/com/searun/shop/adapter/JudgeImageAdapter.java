@@ -1,21 +1,19 @@
 package com.searun.shop.adapter;
 
-import java.util.List;
-
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.searun.shop.R;
-import com.searun.shop.data.ImageDto;
-import com.searun.shop.data.ProductImage;
-import com.searun.shop.util.CommonUtils;
-import com.searun.shop.util.HttpUtil;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.searun.shop.R;
+import com.searun.shop.data.ProductImage;
+import com.searun.shop.util.HttpUtil;
+
+import java.util.List;
 
 public class JudgeImageAdapter extends BaseAdapter {
 	
@@ -61,7 +59,7 @@ public class JudgeImageAdapter extends BaseAdapter {
 		} else {
 			vh = (ViewHolder) convertView.getTag();
 		}
-		ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + list.get(position).getSmallProductImagePath(), vh.imageView, options);
+		ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + list.get(position).getSmallProductImagePath(), vh.imageView, options);
 //			vh.imageView.setImageBitmap(CommonUtils.getBitmapFromByte(list.get(position).getFile()));
 		return convertView;
 	}

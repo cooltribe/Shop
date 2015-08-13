@@ -1,9 +1,16 @@
 package com.searun.shop.adapter;
 
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONObject;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -20,17 +27,10 @@ import com.searun.shop.toobject.JsonToProductImage;
 import com.searun.shop.util.HttpUtil;
 import com.searun.shop.view.CustomProgressDialog;
 
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import org.apache.http.Header;
+import org.json.JSONObject;
+
+import java.util.List;
 
 public class ProductListAdapter extends BaseAdapter {
 	List<ProductDto> list;
@@ -90,7 +90,7 @@ public class ProductListAdapter extends BaseAdapter {
 			List<ProductImage> productList = JsonToProductImage.parserLoginJson(list.get(position).getProductImageListStore());
 			
 			if (null != productList) {
-				ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + productList.get(0).getSmallProductImagePath(), vh.imageView, options);
+				ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + productList.get(0).getSmallProductImagePath(), vh.imageView, options);
 			} else {
 				vh.imageView.setImageResource(R.drawable.mrpic_little);
 			}

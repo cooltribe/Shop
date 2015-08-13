@@ -1,10 +1,29 @@
 package com.searun.shop.activity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONObject;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources.NotFoundException;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AutoCompleteTextView;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
+import android.widget.Toast;
 
 import com.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -15,47 +34,23 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.searun.shop.R;
 import com.searun.shop.adapter.ProductGridAdapter;
 import com.searun.shop.adapter.ProductListAdapter;
-import com.searun.shop.application.MyApplication;
 import com.searun.shop.application.ApplicationData;
+import com.searun.shop.application.MyApplication;
 import com.searun.shop.data.MemberDto;
 import com.searun.shop.data.ProductDto;
 import com.searun.shop.entity.NetWork;
 import com.searun.shop.entity.PdaPagination;
 import com.searun.shop.entity.PdaResponse;
 import com.searun.shop.toobject.JsonToProductList;
-import com.searun.shop.util.DateChange;
 import com.searun.shop.util.HttpUtil;
-import com.searun.shop.util.SaveString;
 import com.searun.shop.util.StoreObject;
 import com.searun.shop.view.CustomProgressDialog;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Resources.NotFoundException;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AbsListView;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.TextView.OnEditorActionListener;
-import android.widget.TextView;
-import android.widget.Toast;
+import org.apache.http.Header;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductListActivity extends Activity implements OnClickListener ,OnItemClickListener,OnCheckedChangeListener{
 	private static final String TAG = "ProductListActivity";
@@ -289,9 +284,12 @@ public class ProductListActivity extends Activity implements OnClickListener ,On
 			e.printStackTrace();
 		}
 	}
+
 	/**
-	 *  查询产品列表(热卖推荐，精品推荐更多接口，分页)
-	 * @param command
+	 * 查询产品列表(热卖推荐，精品推荐更多接口，分页)
+	 * @param product
+	 * @param page
+	 * @param drawable
 	 */
 	private void getMore(ProductDto product,PdaPagination page, final Drawable drawable){
 		

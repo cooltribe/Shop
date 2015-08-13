@@ -1,8 +1,13 @@
 package com.searun.shop.adapter;
 
-import java.util.List;
-
-
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -12,14 +17,7 @@ import com.searun.shop.data.ProductImage;
 import com.searun.shop.toobject.JsonToProductImage;
 import com.searun.shop.util.HttpUtil;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.CheckBox;
-import android.widget.ImageView;
-import android.widget.TextView;
+import java.util.List;
 
 public class FavouriteAdapter extends BaseAdapter {
 	List<ProductDto> list;
@@ -82,7 +80,7 @@ public class FavouriteAdapter extends BaseAdapter {
 			}
 			List<ProductImage> imagesList = JsonToProductImage.parserLoginJson(list.get(position).getProductImageListStore());
 			if (null != imagesList) {
-				ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
+				ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
 			} else {
 				vh.imageView.setImageResource(R.drawable.mrpic_little);
 			}

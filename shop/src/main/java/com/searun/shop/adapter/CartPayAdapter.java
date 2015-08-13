@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
@@ -114,7 +113,7 @@ public static void setIsSelected(HashMap<Integer, Boolean> isSelected) {
 		}
 		List<ProductImage> imagesList = JsonToProductImage.parserLoginJson(list.get(paramInt).getProduct().getProductImageListStore());
 		if (imagesList != null) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
 		} else {
 			vh.imageView.setImageResource(R.drawable.mrpic_little);
 		}

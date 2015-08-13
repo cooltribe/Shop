@@ -2,14 +2,12 @@ package com.searun.shop.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,18 +15,13 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.searun.shop.R;
 import com.searun.shop.activity.WriteJudgeActivity;
-import com.searun.shop.application.MyApplication;
 import com.searun.shop.data.CartItemDto;
 import com.searun.shop.data.OrderItemDto;
-import com.searun.shop.data.ProductDto;
 import com.searun.shop.data.ProductImage;
 import com.searun.shop.toobject.JsonToProductImage;
 import com.searun.shop.util.HttpUtil;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import org.json.JSONException;
 
 public class WriteJudgeAdapter extends BaseAdapter
 {
@@ -89,7 +82,7 @@ public class WriteJudgeAdapter extends BaseAdapter
 		
 		List<ProductImage> imagesList = JsonToProductImage.parserLoginJson(list.get(paramInt).getProduct().getProductImageListStore());
 		if (null != imagesList) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(), vh.imageView, options);
 		} else {
 			vh.imageView.setImageResource(R.drawable.mrpic_little);
 		}

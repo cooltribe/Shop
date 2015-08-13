@@ -131,7 +131,7 @@ public class WriteJudgeActivity extends Activity implements OnClickListener {
 
 		List<ProductImage> imagesList = JsonToProductImage.parserLoginJson(productDto.getProductImageListStore());
 		if (null != imagesList) {
-			ImageLoader.getInstance().displayImage(HttpUtil.IMG_PATH + imagesList.get(0).getSmallProductImagePath(), productImg, options);
+			ImageLoader.getInstance().displayImage(HttpUtil.BASE_URL + imagesList.get(0).getSmallProductImagePath(), productImg, options);
 		} else {
 			productImg.setImageResource(R.drawable.mrpic_little);
 		}
@@ -427,8 +427,6 @@ public class WriteJudgeActivity extends Activity implements OnClickListener {
 	/**
 	 * 
 	 * 裁剪图片方法实现
-	 * 
-	 * 
 	 * 
 	 * @param uri
 	 */

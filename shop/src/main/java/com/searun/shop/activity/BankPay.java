@@ -49,7 +49,7 @@ public class BankPay extends Activity implements OnClickListener{
 		title.setText("付款信息");
 		findViewById(R.id.other).setVisibility(View.GONE);
 		description = (WebView) findViewById(R.id.bank_description);
-		Log.i("?????",orderDto.getPaymentConfig().getDescription());
+		Log.i("付款信息付款信息付款信息付款信息",orderDto.getPaymentConfig().getDescription());
 		if(null != orderDto){
 			description.loadData(paymentConfigDto.getDescription(), "text/html;charset=UTF-8", null);
 		}
