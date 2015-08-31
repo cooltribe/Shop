@@ -2,109 +2,109 @@
 <items version="2" >
 
     <item
-        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\classes-f37d64f9d2e0675dfcf7fc46a060ce52661a5c24.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\classes-f9e38a80642080fb9c3d4da993caabaaff355401.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-b0f42edde89b79d45e5a0cd5c0e15e2c4c747b4a.jar" />
-    </item>
-    <item
         jar="D:\AndroidStudioProjects\Shop\shop\libs\alipayutdid.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\alipayutdid-a98e112eb08d0689a726ef3ca4acdaacbb2ee7f9.jar" />
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\alipayutdid-a98e112eb08d0689a726ef3ca4acdaacbb2ee7f9.jar" />
     </item>
     <item
-        jar="D:\AndroidStudioProjects\Shop\shop\libs\locSDK_3.1.jar"
+        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="09224a1883da8b5bd37e766f4fab80570d879898">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\locSDK_3.1-942c2efe4e2cfb1b0a1105f4b6f9792376d63323.jar" />
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\classes-f37d64f9d2e0675dfcf7fc46a060ce52661a5c24.jar" />
     </item>
     <item
         jar="D:\eclipse\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-0e4fed57e67a99eb59cae51f43f7de454da71f7d.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\libs\universal-image-loader-1.9.4-SNAPSHOT.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="831368dfdef2c9396955489e9058e6ad8a8e4244">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.4-SNAPSHOT-24016007fb42f092b3b05c734fb1981de5d0b0d0.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\libs\alipaysecsdk.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7413c074c9edf523050267b93d0875151dc4b644">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\alipaysecsdk-4393cf49172835b9abf086c67863d8bec651de26.jar" />
-    </item>
-    <item
-        jar="C:\Users\陈玉柱\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\gson-2.2.4-6da62c00b5a5f7ff11d8fd33366f9146d3787526.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\Shop\base_library_pullToRefresh_chenyoca\unspecified\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="047fb969cfb8c35b2a7a945548e94425a6c96027">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\classes-bbf83796291fe7da78836ec74960c62f91029ee5.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\libs\android-support-v7-recyclerview.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="95c892d244f49414bbdf92c2235a32ea06bc68aa">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\android-support-v7-recyclerview-6d2ae8ae2bbd38a609d47da8842cb51166858cbd.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\libs\alipaysdk.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61551cf6e23c5133046a07ec6cd9dee6aa5c78a0">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\alipaysdk-fc4787c8da3dfcc0afc0304e4b731890033fb7f9.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Shop\shop\libs\commons-codec-1.8.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="af3be3f74d25fc5163b54f56a0d394b462dafafd">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\commons-codec-1.8-a8bcce84d4e5d8337dcdfdbc25aa541dc5ac7eca.jar" />
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\support-annotations-22.2.0-0e4fed57e67a99eb59cae51f43f7de454da71f7d.jar" />
     </item>
     <item
         jar="D:\AndroidStudioProjects\Shop\shop\libs\android-async-http-1.4.5.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\android-async-http-1.4.5-b3557a7b7eb1744acd7f6d491c6122ce3bd3f574.jar" />
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\android-async-http-1.4.5-b3557a7b7eb1744acd7f6d491c6122ce3bd3f574.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\libs\alipaysdk.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61551cf6e23c5133046a07ec6cd9dee6aa5c78a0">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\alipaysdk-fc4787c8da3dfcc0afc0304e4b731890033fb7f9.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\libs\commons-codec-1.8.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="af3be3f74d25fc5163b54f56a0d394b462dafafd">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\commons-codec-1.8-a8bcce84d4e5d8337dcdfdbc25aa541dc5ac7eca.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\classes-f9e38a80642080fb9c3d4da993caabaaff355401.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\libs\universal-image-loader-1.9.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="831368dfdef2c9396955489e9058e6ad8a8e4244">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\universal-image-loader-1.9.4-SNAPSHOT-24016007fb42f092b3b05c734fb1981de5d0b0d0.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\internal_impl-22.2.0-b0f42edde89b79d45e5a0cd5c0e15e2c4c747b4a.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\libs\alipaysecsdk.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7413c074c9edf523050267b93d0875151dc4b644">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\alipaysecsdk-4393cf49172835b9abf086c67863d8bec651de26.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\build\intermediates\exploded-aar\Shop\base_library_pullToRefresh_chenyoca\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="11c4d0786cd69c18e3ccb1a6f39777802529f2e8">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\classes-bbf83796291fe7da78836ec74960c62f91029ee5.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\libs\android-support-v7-recyclerview.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="95c892d244f49414bbdf92c2235a32ea06bc68aa">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\android-support-v7-recyclerview-6d2ae8ae2bbd38a609d47da8842cb51166858cbd.jar" />
+    </item>
+    <item
+        jar="C:\Users\陈玉柱\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\gson-2.2.4-6da62c00b5a5f7ff11d8fd33366f9146d3787526.jar" />
     </item>
     <item
         jar="D:\AndroidStudioProjects\Shop\shop\libs\baidumapapi_v2_4_1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f09ff30981f3430534c6fce3bd9fea071d93f513">
-        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\debug\baidumapapi_v2_4_1-c3d8599c8dfe27cd7cdd0a05f94fbeebd17e05cd.jar" />
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\baidumapapi_v2_4_1-c3d8599c8dfe27cd7cdd0a05f94fbeebd17e05cd.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\Shop\shop\libs\locSDK_3.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="09224a1883da8b5bd37e766f4fab80570d879898">
+        <dex dex="D:\AndroidStudioProjects\Shop\shop\build\intermediates\pre-dexed\release\locSDK_3.1-942c2efe4e2cfb1b0a1105f4b6f9792376d63323.jar" />
     </item>
 
 </items>

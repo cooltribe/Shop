@@ -68,6 +68,7 @@ public class MyOrder extends Activity implements OnClickListener, OnItemClickLis
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.titlebar);
 		init();
 		findView();
+		radioInit();
 		getMyOrder(orderDto,page);
 		refresh(orderListView, orderDto);
 	}
@@ -75,9 +76,19 @@ public class MyOrder extends Activity implements OnClickListener, OnItemClickLis
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		findView();
 		getMyOrder(orderDto,page);
 		refresh(orderListView, orderDto);
 	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		findView();
+		getMyOrder(orderDto,page);
+		refresh(orderListView, orderDto);
+	}
+
 	private void findView() {
 		back = (Button) findViewById(R.id.back);
 		back.setOnClickListener(instance);
@@ -85,6 +96,10 @@ public class MyOrder extends Activity implements OnClickListener, OnItemClickLis
 		title.setText("我的订单");
 		RadioGroup rg = (RadioGroup) findViewById(R.id.order_rg);
 		rg.setOnCheckedChangeListener(instance);
+		orderListView = (PullToRefreshListView) findViewById(R.id.order_list);
+
+	}
+	private void radioInit(){
 		RadioButton all = (RadioButton) findViewById(R.id.all);
 		RadioButton pay = (RadioButton) findViewById(R.id.pay);
 		RadioButton send = (RadioButton) findViewById(R.id.send);
@@ -92,26 +107,25 @@ public class MyOrder extends Activity implements OnClickListener, OnItemClickLis
 		judge = (RadioButton) findViewById(R.id.judge);
 		int tag = intent.getExtras().getInt("tag");
 		findViewById(R.id.other).setVisibility(View.GONE);
-		orderListView = (PullToRefreshListView) findViewById(R.id.order_list);
 		switch (tag) {
-		case 1:
-			all.setChecked(true);
-			break;
+			case 1:
+				all.setChecked(true);
+				break;
 
-		case 2:
-			pay.setChecked(true);
-			break;
-		case 3:
-			send.setChecked(true);
-			break;
-		case 4:
-			takeOver.setChecked(true);
-			break;
-		case 5:
-			judge.setChecked(true);
-			break;
-		case 6:
-			break;
+			case 2:
+				pay.setChecked(true);
+				break;
+			case 3:
+				send.setChecked(true);
+				break;
+			case 4:
+				takeOver.setChecked(true);
+				break;
+			case 5:
+				judge.setChecked(true);
+				break;
+			case 6:
+				break;
 		}
 	}
 	private void refresh(final PullToRefreshListView view ,final OrderDto orderDto){

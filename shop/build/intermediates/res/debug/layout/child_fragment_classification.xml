@@ -11,9 +11,9 @@
         android:divider="@drawable/dottedline"
         android:dividerHeight="5dp"
         android:layout_height="wrap_content" />
-  <View 
-      android:layout_width="match_parent"
-      android:layout_height="5dp"
-      android:background="@drawable/dottedline"/>
+  <!--<View -->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="5dp"-->
+      <!--android:background="@drawable/dottedline"/>-->
 
 </LinearLayout><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/child_fragment_classification.xml -->

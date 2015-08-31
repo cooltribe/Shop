@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -68,6 +69,7 @@ public class HomePageFragment extends Fragment implements OnClickListener, Adapt
 	private VerticalScrollTextView news;
 	private DisplayImageOptions options;
 	private ArticleDto articleDto;
+	private ViewPager vp;
 	
 	private void initData(){
 		context = getActivity();
@@ -304,7 +306,7 @@ public class HomePageFragment extends Fragment implements OnClickListener, Adapt
 	private void setBanner(View paramView) {
 		viewFlow = ((ViewFlow) paramView.findViewById(R.id.viewflow));
 		viewFlow.setAdapter(new ImageAdapter(getActivity()));
-		viewFlow.setmSideBuffer(2);
+		viewFlow.setmSideBuffer(3);
 		CircleFlowIndicator localCircleFlowIndicator = (CircleFlowIndicator) paramView.findViewById(R.id.viewflowindic);
 		viewFlow.setFlowIndicator(localCircleFlowIndicator);
 		viewFlow.setTimeSpan(4500L);

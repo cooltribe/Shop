@@ -9,26 +9,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-import com.google.gson.Gson;
-import com.searun.shop.data.ProductDto;
-import com.searun.shop.entity.PdaPagination;
-import com.searun.shop.entity.PdaRequest;
 import com.searun.shop.util.HttpUtil;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 跟网络相关的工具类
@@ -52,36 +40,28 @@ public class NetUtils {
 //                value = true;
 //            }
 
-
-
-            HttpPost post = new HttpPost(url + "searchProducts.action");
+            HttpGet get = new HttpGet(url + "getAgreement.action");
             HttpClient client = HttpUtil.getHttpClient();
-            List<NameValuePair> list = new ArrayList<>();
-            ProductDto pd = new ProductDto();
-            pd.setMetaKeywords("猪");
-            PdaPagination pg = new PdaPagination();
-            pg.setAmount(10);
-            pg.setPageNumber(1);
-            PdaRequest<ProductDto> localPdaRequest = new PdaRequest<ProductDto>();
-            localPdaRequest.setData(pd);
-            localPdaRequest.setPagination(pg);
-            String str = new Gson().toJson(localPdaRequest);
-            list.add(new BasicNameValuePair("jsonString",str));
-            post.setEntity(new UrlEncodedFormEntity(list, HTTP.UTF_8));
-            HttpResponse response = client.execute(post);
+            HttpResponse response = client.execute(get);
             int code = response.getStatusLine().getStatusCode();
             System.out.println(">>>>>>>>>>>>>>>> " + code + " <<<<<<<<<<<<<<<<<<");
             if (code == HttpStatus.SC_OK){
                 HttpEntity entity = response.getEntity();
                 String result = EntityUtils.toString(entity);
 //                PdaResponse<List<ProductDto>> pdaResponse = JsonToProductList.parserLoginJson(response.toString());
-                JSONObject object = new JSONObject(result);
-                value = object.optBoolean("success",false);
+//                JSONObject object = new JSONObject(result);
+//                value = object.optBoolean("success",false);
+                int length = result.length();
+                value = (result.substring(0,1).equals("{")) && (result.substring(length - 1, length).equals("}"));
                 Log.d("结果结果结果1",value + "---" + result);
+            } else {
+                value = false;
             }
         } catch (Exception e) {
         // TODO Auto-generated catch block
             e.printStackTrace();
+            value = false;
+            Log.d("结果结果结果xxxxxxx",value + "------------------" );
         }
         Log.d("结果结果结果2",value + "------------------" );
         return value;

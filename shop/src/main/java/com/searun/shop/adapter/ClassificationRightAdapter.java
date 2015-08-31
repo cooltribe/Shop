@@ -1,40 +1,21 @@
 package com.searun.shop.adapter;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.searun.shop.R;
-import com.searun.shop.activity.ProductListActivity;
-import com.searun.shop.activity.ProductListActivity1;
-import com.searun.shop.data.ProductCategoryDto;
-import com.searun.shop.data.ProductDto;
-import com.searun.shop.entity.NetWork;
-import com.searun.shop.entity.PdaResponse;
-import com.searun.shop.util.DateChange;
-import com.searun.shop.util.HttpUtil;
-import com.searun.shop.util.Utility;
-import com.searun.shop.view.MyGridView;
-
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.searun.shop.R;
+import com.searun.shop.activity.ProductListActivity;
+import com.searun.shop.data.ProductCategoryDto;
+
+import java.util.List;
 
 public class ClassificationRightAdapter extends BaseAdapter {
 	List<ProductCategoryDto> list;

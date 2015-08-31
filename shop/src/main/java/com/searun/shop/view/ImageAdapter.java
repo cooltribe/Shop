@@ -17,7 +17,7 @@ public class ImageAdapter extends BaseAdapter
 {
 	private Context mContext;
 	private LayoutInflater mInflater;
-	private static final int[] ids = {R.drawable.banner1, R.drawable.banner2 };
+	private static final int[] ids = {R.drawable.banner01, R.drawable.banner02, R.drawable.banner03};
 	
 	public ImageAdapter(Context context) {
 		mContext = context;

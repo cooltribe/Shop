@@ -7,10 +7,10 @@
 
     <TextView
         android:id="@+id/cell_name"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lines="2"
+        android:background="@drawable/gridview_bj_noselect"
         android:gravity="center" />
 
 </LinearLayout><!-- From: file:/D:/AndroidStudioProjects/Shop/shop/src/main/res/layout/item_cell.xml -->

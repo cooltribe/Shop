@@ -31,7 +31,8 @@ public class HttpUtil {
 //	 public static final String IMG_PATH = "http://192.168.2.36:8877/shopxx";
 //	 private static final String BASE_URL = "http://192.168.2.36:8877/shopxx/apps/";
 //	 public static final String RETURN_URL = "http://192.168.2.36:8877/shopxx";
-	 public static  String BASE_URL;
+	 public static  String BASE_URL = "http://www.51egoods.com";
+	public static  String PRE_URL = "http://221.226.22.84";
 
 	public static void setBaseUrl(String baseUrl) {
 		BASE_URL = baseUrl;

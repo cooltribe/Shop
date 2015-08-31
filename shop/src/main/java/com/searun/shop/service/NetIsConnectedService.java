@@ -25,18 +25,28 @@ public class NetIsConnectedService extends Service {
     public void onCreate() {
         app = (MyApplication) getApplication();
         URL = app.getBaseUrl();
-       new Thread(new Runnable() {
-           @Override
-           public void run() {
-               Log.i("XXXXXYYYYYYYY" , NetUtils.checkURL("http://www.51egoods.com" + "/apps/") + "");
-               if (!NetUtils.checkURL("http://www.51egoods.com")){
-//                   BASE_URL = "http://221.226.22.84/apps/";
-                  HttpUtil.setBaseUrl("http://221.226.22.84");
-               } else {
-                   HttpUtil.setBaseUrl("http://www.51egoods.com");
-               }
-           }
-       }).start();
+        try {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    boolean isConnected = NetUtils.checkURL(HttpUtil.BASE_URL + "/apps/");
+                    Log.i("XXXXXYYYYYYYY" , isConnected + "");
+                    if (!isConnected){
+     //                   BASE_URL = "http://221.226.22.84/apps/";
+                       HttpUtil.setBaseUrl("http://221.226.22.84:8081/shopxx");
+                        Log.i("111111111", "111111111111111111");
+//                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    } else {
+                        HttpUtil.setBaseUrl("http://www.51egoods.com");
+                        Log.i("22222222", "2222222222222222");
+                    }
+                }
+            }).start();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.i("3333333333333", "333333333333333");
+            HttpUtil.setBaseUrl("http://221.226.22.84:8081/shopxx");
+        }
         super.onCreate();
     }
 

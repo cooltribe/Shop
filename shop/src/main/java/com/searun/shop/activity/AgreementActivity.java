@@ -35,6 +35,7 @@ public class AgreementActivity extends Activity
     back.setOnClickListener(this);
     title = ((TextView)findViewById(R.id.title));
     title.setText("注册协议");
+    findViewById(R.id.other).setVisibility(View.GONE);
     webView = ((WebView)findViewById(R.id.agreement_webview));
   }
 

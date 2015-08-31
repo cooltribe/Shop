@@ -43,10 +43,10 @@ public final class R {
 		public static final int indicator_right_padding = 0x7f070035;
 	}
 	public static final class drawable {
-		public static final int default_indicator_arrow = 0x7f02004f;
-		public static final int default_indicator_rotate = 0x7f020050;
-		public static final int indicator_bg_bottom = 0x7f020087;
-		public static final int indicator_bg_top = 0x7f020088;
+		public static final int default_indicator_arrow = 0x7f020050;
+		public static final int default_indicator_rotate = 0x7f020051;
+		public static final int indicator_bg_bottom = 0x7f020088;
+		public static final int indicator_bg_top = 0x7f020089;
 	}
 	public static final class id {
 		public static final int both = 0x7f0b0020;
