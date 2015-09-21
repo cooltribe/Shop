@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pubutil">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/shop/libs/pubutil.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

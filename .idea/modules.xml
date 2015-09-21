@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Shop.iml" filepath="$PROJECT_DIR$/Shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/base_library_pullToRefresh_chenyoca/base_library_pullToRefresh_chenyoca.iml" filepath="$PROJECT_DIR$/base_library_pullToRefresh_chenyoca/base_library_pullToRefresh_chenyoca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytest/mytest.iml" filepath="$PROJECT_DIR$/mytest/mytest.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop/shop.iml" filepath="$PROJECT_DIR$/shop/shop.iml" />
     </modules>
   </component>

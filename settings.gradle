@@ -1,2 +1,2 @@
-include ':base_library_pullToRefresh_chenyoca'
+include ':base_library_pullToRefresh_chenyoca', ':mytest'
 include ':shop'
